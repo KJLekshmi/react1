@@ -1,0 +1,69 @@
+api call in js
+..............
+AJAX->xml  http
+     ->fetch
+     ->async await
+
+
+hook useEffect used instead of ng Oninit
+
+
+
+Redirection in react
+.....................
+
+react-router-dom   // package must be installed
+cmd for install package-> npm i react-router-dom
+
+import { 
+     BrowserRouter as Router,-> all routing need components
+     Routes,                 -> used to set paths for each components
+     Route                   -> used when more than 1 path
+       } from 'react-router-dom';
+
+
+useParams  - hook used to access params from component url 
+
+
+REDUX
+.....
+Coupling->parent -child relation   
+        -> many contn b/w parent and child components
+
+
+props driling->data sharing not possible when any of the intrmediate components get error
+            ->In coupling if any intermediate component have any error all the other children will not work
+            -> To avoid props drilling we need to reduce coupling and make all components independent
+            -> For this REACT introduced a new technology-state management techonology-REDUX
+
+REDUX process
+.............
+*create a new js file to keep the states,all the components can access the js file
+    ->the components can only access the data from js fie,but cant update data in js file
+
+//Action (file) -> a file with all the logics to update the state
+//Dispatch-> a method used to dispatch the logic in action file when the component need state updation
+//Reducer (librry)-> Updates the data in js fle a/c to the payload response get from the Action file
+
+
+Library used for apply REDUX
+............................
+1.REDUX
+2.REACT REDUX
+3.REDUX THUNK
+   // cmnd for install-> npm i redux react-redux redux-thunk
+
+
+createstore()-> method in REDUX  used to create store in js file
+             -> 2 areguments
+             1.Reducer
+             2.middleware(used to change REDUX to asynchronous)
+    applyMiddleware()->method in REDUX to apply middleware
+    combineReducers()->method in REDUX used to combine all the reducers in js file
+    thunk()          -> in REDUX-THUNK used to create midddleware
+
+
+1.create store
+2.apply the store in index.js using provider tag
+  provider-> its a tag used to pass the store (from react-redux)in  index.js
+3.
